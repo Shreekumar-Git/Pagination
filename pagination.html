@@ -38,12 +38,13 @@ let page = 1;
 const rows = 10;
 
 // fetch data
-fetch("https://raw.githubusercontent.com/Rajavasanthan/jsondata/master/pagenation.json")
+fetch("data.json")
   .then(r => r.json())
   .then(json => {
     data = json;
     showPage(page);
   });
+
 // function to display rows
 function showPage(p) {
   const tbody = document.getElementById("table-body");
